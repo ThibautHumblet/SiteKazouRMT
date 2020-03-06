@@ -1,0 +1,135 @@
+.navbar {
+    height: 110px;
+    width: 100%;
+    background-color: #282f39;
+    position: fixed;
+    margin: 0px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar img {
+    height: 130px;
+    padding-left: 10px;
+    padding-top: 5px;
+    z-index: 200;
+    position: absolute;
+}
+
+.navbar>.navbar-header {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.navbar>.navbar-header>.navbar-title {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 24px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar>.navbar-header>.navbar-titel>a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar>.navbar-btn {
+    display: none;
+}
+.navbar>.navbar-links>a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: #efefef;
+}
+
+.navbar>.navbar-links>a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.navbar>#navbar-check {
+    display: none;
+}
+
+.navbar-title p {
+    display: inline-block;
+    margin-right: -4px;
+    box-sizing: border-box;
+}
+
+ /* Smartphone layout */
+
+ @media (max-width: 480px) {
+    .navbar-title {
+        padding: 0px 10px 10px 10px;
+    }
+}
+
+@media(max-width: 750px) {
+    .navbar>.navbar-btn {
+        display: inline-block;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+    .navbar>.navbar-btn>label {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        padding: 13px;
+    }
+    .navbar>.navbar-btn>label>span {
+        display: block;
+        width: 25px;
+        height: 10px;
+        border-top: 2px solid #eee;
+    }
+    .navbar>.navbar-links {
+        position: absolute;
+        display: block;
+        width: 100%;
+        background-color: #333;
+        height: 0px;
+        transition: all 0.3s ease-in;
+        overflow-y: hidden;
+        top: 110px;
+        left: 0px;
+        z-index: 1;
+        font-size: 32px;
+    }
+    .navbar>.navbar-links>a {
+        display: block;
+        width: 100%;
+    }
+
+    .navbar>#navbar-check:not(:checked)+.navbar-links {
+        height: 0px;
+    }
+    .navbar>#navbar-check:checked+.navbar-links {
+        height: calc(100vh - 110px);
+        overflow-y: auto;
+        padding-top: 50px;
+    }
+}
+
+@media(min-width: 751px) {
+    .navbar img {
+        position: relative;
+        padding-top: 50px;
+    }
+    .navbar>.navbar-links {
+        font-size: 20px;
+        justify-content: right;
+    }
+    .navbar{
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+}
+
+@media(min-width: 1200px) {
+    .navbar>.navbar-links {
+        font-size: 34px;
+    }
+}
