@@ -1,8 +1,8 @@
+/*#region Navbar*/
 .navbar {
     height: 110px;
     width: 100%;
     background-color: #282f39;
-    position: fixed;
     margin: 0px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
@@ -56,7 +56,7 @@
     margin-right: -4px;
     box-sizing: border-box;
 }
-
+/*#endregion */
  /* Smartphone layout */
 
  @media (max-width: 480px) {
@@ -116,6 +116,7 @@
     .navbar img {
         position: relative;
         padding-top: 50px;
+        height: 175px;
     }
     .navbar>.navbar-links {
         font-size: 20px;
