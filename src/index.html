@@ -10,8 +10,29 @@
 <link rel="stylesheet" type="text/css" href="/node_modules/primeng/resources/themes/nova-light/theme.css" />
 <link rel="stylesheet" type="text/css" href="/node_modules/primeng/resources/primeng.min.css" />
 <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
 </head>
 <body>
+  <script src="assets\js\CalendarScraper.js"></script>
   <app-root></app-root>
+  <script>
+    formatGoogleCalendar.init({
+      calendarUrl: 'https://www.googleapis.com/calendar/v3/calendars/roger@kazourmt.be/events?key=AIzaSyCR3-ptjHE-_douJsn8o20oRwkxt-zHStY',
+      past: true,
+      upcoming: true,
+      sameDayTimes: true,
+      pastTopN: 20,
+      upcomingTopN: 20,
+      recurringEvents: true,
+      itemsTagName: 'li',
+      upcomingSelector: '#events-upcoming',
+      pastSelector: '#events-past',
+      upcomingHeading: '<h2>Binnenkort!</h2>',
+      pastHeading: '<h2>Dit heb je gemist?</h2>',
+      format: ['*date*', ': ', '*summary*', ' &mdash; ', '*description*', ' in ', '*location*'],
+      timeMin: '2000-06-03T10:00:00-07:00',
+      timeMax: '2030-06-03T10:00:00-07:00'
+    });
+  </script>
 </body>
 </html>
