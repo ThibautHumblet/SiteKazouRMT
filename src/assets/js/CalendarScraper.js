@@ -218,13 +218,13 @@ window.formatGoogleCalendar = function () {
 
     //Get month name according to index
     var getMonthName = function getMonthName(month) {
-        var monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        var monthNames = ['Januari', 'Februari', 'Maart', 'April', 'Mei', 'Juni', 'Juli', 'Augustus', 'September', 'Oktober', 'November', 'December'];
 
         return monthNames[month];
     };
 
     var getDayName = function getDayName(day) {
-        var dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        var dayNames = ['Zondag', 'Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag'];
 
         return dayNames[day];
     };
@@ -273,11 +273,11 @@ window.formatGoogleCalendar = function () {
         }
 
         if (config.sameDayTimes && !moreDaysEvent && !isAllDayEvent) {
-            formattedTime = ' from ' + getFormattedTime(dateStart) + ' - ' + getFormattedTime(dateEnd);
+            formattedTime = ' van ' + getFormattedTime(dateStart) + ' - ' + getFormattedTime(dateEnd);
         }
 
         //month day, year time-time
-        return dayNameStart + getMonthName(dateStart[1]) + ' ' + dateStart[0] + ', ' + dateStart[2] + formattedTime;
+        return dayNameStart + ' ' + dateStart[0] + ' ' + getMonthName(dateStart[1]) + ', ' + dateStart[2] + formattedTime;
     };
 
     var formatDateOneDay = function formatDateOneDay(dateStart, dayNames) {
@@ -287,7 +287,7 @@ window.formatGoogleCalendar = function () {
             dayName = getDayNameFormatted(dateStart);
         }
         //month day, year
-        return dayName + getMonthName(dateStart[1]) + ' ' + dateStart[0] + ', ' + dateStart[2];
+        return dayName + ' ' + dateStart[0] + ' ' + getMonthName(dateStart[1]) + ' ' +  ', ' + dateStart[2];
     };
 
     var formatDateDifferentDay = function formatDateDifferentDay(dateStart, dateEnd, dayNames) {
@@ -299,7 +299,7 @@ window.formatGoogleCalendar = function () {
             dayNameEnd = getDayNameFormatted(dateEnd);
         }
         //month day-day, year
-        return dayNameStart + getMonthName(dateStart[1]) + ' ' + dateStart[0] + '-' + dayNameEnd + dateEnd[0] + ', ' + dateStart[2];
+        return dayNameStart + dateStart[0] + ' ' + getMonthName(dateStart[1]) +  ' - ' + dayNameEnd + dateEnd[0] + ' ' + getMonthName(dateEnd[1]) + ', ' + dateStart[2];
     };
 
     var formatDateDifferentMonth = function formatDateDifferentMonth(dateStart, dateEnd, dayNames) {
@@ -311,7 +311,7 @@ window.formatGoogleCalendar = function () {
             dayNameEnd = getDayNameFormatted(dateEnd);
         }
         //month day - month day, year
-        return dayNameStart + getMonthName(dateStart[1]) + ' ' + dateStart[0] + '-' + dayNameEnd + getMonthName(dateEnd[1]) + ' ' + dateEnd[0] + ', ' + dateStart[2];
+        return dayNameStart + dateStart[0] + ' ' + getMonthName(dateStart[1]) + '-' + dayNameEnd + dateEnd[0] + ' ' + getMonthName(dateEnd[1]) + ' ' + ', ' + dateStart[2];
     };
 
     var formatDateDifferentYear = function formatDateDifferentYear(dateStart, dateEnd, dayNames) {
@@ -323,7 +323,7 @@ window.formatGoogleCalendar = function () {
             dayNameEnd = getDayNameFormatted(dateEnd);
         }
         //month day, year - month day, year
-        return dayNameStart + getMonthName(dateStart[1]) + ' ' + dateStart[0] + ', ' + dateStart[2] + '-' + dayNameEnd + getMonthName(dateEnd[1]) + ' ' + dateEnd[0] + ', ' + dateEnd[2];
+        return dayNameStart + dateStart[0] + ' ' + getMonthName(dateStart[1])  + ', ' + dateStart[2] + '-' + dayNameEnd + dateEnd[0] + ' ' + getMonthName(dateEnd[1]) + ', ' + dateEnd[2];
     };
 
     //Check differences between dates and format them
@@ -373,29 +373,19 @@ window.formatGoogleCalendar = function () {
 
     var getFormattedTime = function getFormattedTime(date) {
         var formattedTime = '',
-            period = 'AM',
             hour = date[3],
             minute = date[4];
 
-        // Handle afternoon.
-        if (hour >= 12) {
-            period = 'PM';
-
-            if (hour >= 13) {
-                hour -= 12;
-            }
-        }
-
         // Handle midnight.
         if (hour === 0) {
-            hour = 12;
+            hour = 0;
         }
 
         // Ensure 2-digit minute value.
         minute = (minute < 10 ? '0' : '') + minute;
 
         // Format time.
-        formattedTime = hour + ':' + minute + period;
+        formattedTime = hour + ':' + minute;
         return formattedTime;
     };
 
