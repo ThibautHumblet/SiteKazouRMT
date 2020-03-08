@@ -18,10 +18,10 @@
   <script>
     formatGoogleCalendar.init({
       calendarUrl: 'https://www.googleapis.com/calendar/v3/calendars/roger@kazourmt.be/events?key=AIzaSyCR3-ptjHE-_douJsn8o20oRwkxt-zHStY',
-      past: true,
+      past: 0,
       upcoming: true,
       sameDayTimes: true,
-      pastTopN: 20,
+      pastTopN: 0,
       upcomingTopN: 20,
       recurringEvents: true,
       itemsTagName: 'li',
@@ -29,7 +29,7 @@
       pastSelector: '#events-past',
       upcomingHeading: '<h2>Binnenkort!</h2>',
       pastHeading: '<h2>Dit heb je gemist?</h2>',
-      format: ['*date*', ': ', '*summary*', ' &mdash; ', '*description*', ' in ', '*location*'],
+      format: [ '*date*', ': ', '*summary*', ' &mdash; ', '*description*', ' in ', '*location*'],
       timeMin: '2000-06-03T10:00:00-07:00',
       timeMax: '2030-06-03T10:00:00-07:00'
     });
