@@ -1,6 +1,5 @@
 body {
     width: 100%;
-    position: absolute;
     background-size: cover;
     background-image: url(https://kazoustorageprod.blob.core.windows.net/mwportal/1026/bannerthemapagina_zomer.jpg);
     padding: 50px 30px 30px 30px;
@@ -11,8 +10,8 @@ body {
 }
 
 .beThere {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     background-color: #f1d600;
     border-radius: 90% 90% 0 90%;
     display: table;
@@ -22,17 +21,23 @@ body {
 .beThere p{
     display: table-cell;
 vertical-align: middle;
-font-size: 55px;
+font-size: 40px;
 color: #ffffff;
 font-weight: 800;
 font-family: 'Montserrat', sans-serif;
 }
 
 .beThere-header {
-    padding-left: 50px; 
+    padding-left: 10px; 
     font-family: 'Montserrat', sans-serif;
     font-size: 11px;
+    display: table-cell;
+    vertical-align: middle;
 
+}
+
+.fullBeThereHeader{
+    display: table;
 }
 
  /* Smartphone layout */
@@ -41,7 +46,9 @@ font-family: 'Montserrat', sans-serif;
 }
 
 @media(max-width: 750px) {
-
+    .calendarbutton {
+        margin-top: 10px;
+    }
 }
 
  /* Laptop layout */
@@ -53,6 +60,23 @@ font-family: 'Montserrat', sans-serif;
 
 .right-column {
     padding-left: 20px;
+}
+
+.calendarbutton {
+    margin-top: 20px;
+}
+
+.beThere {
+    width: 80px;
+    height: 80px;
+}
+
+.beThere p {
+    font-size: 55px;
+}
+
+.beThere-header{
+    font-size: 20px;
 }
 
 }

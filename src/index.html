@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>SiteKazouRMT</title>
+  <title>Kazou RMT</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -15,24 +15,6 @@
 <body>
   <script src="assets\js\CalendarScraper.js"></script>
   <app-root></app-root>
-  <script>
-    formatGoogleCalendar.init({
-      calendarUrl: 'https://www.googleapis.com/calendar/v3/calendars/roger@kazourmt.be/events?key=AIzaSyCR3-ptjHE-_douJsn8o20oRwkxt-zHStY',
-      past: 0,
-      upcoming: true,
-      sameDayTimes: true,
-      pastTopN: 0,
-      upcomingTopN: 20,
-      recurringEvents: true,
-      itemsTagName: 'div class="dateItem"',
-      upcomingSelector: '#events-upcoming',
-      pastSelector: '#events-past',
-      upcomingHeading: '<h2>Binnenkort!</h2>',
-      pastHeading: '<h2>Dit heb je gemist?</h2>',
-      format: ['*dateDay*', '<div class="details">', '*summary*', ' : ', '*date*', ' &mdash; ', '*description*', ' @ ', '*location*', '</div>'],
-      timeMin: '2000-06-03T10:00:00-07:00',
-      timeMax: '2030-06-03T10:00:00-07:00'
-    });
-  </script>
+  <script src="assets\js\CalendarScraperConfig.js"></script>
 </body>
 </html>

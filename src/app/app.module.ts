@@ -10,12 +10,14 @@ import { AppComponent } from './app.component';
 import { Button } from 'protractor';
 import { HeaderComponent } from './header/header.component';
 import { IndexComponent } from './index/index.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    IndexComponent
+    IndexComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
