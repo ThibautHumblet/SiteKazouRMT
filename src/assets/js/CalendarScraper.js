@@ -284,7 +284,9 @@ window.formatGoogleCalendar = function () {
     };
 
     var getDayDigit = function getDayDigit(dateStart){
-        return dateStart[0]+'/'+dateStart[1];
+        var month = dateStart[1];
+        month = month+1;
+        return dateStart[0]+'/'+month;
     }
 
     var formatDateOneDay = function formatDateOneDay(dateStart, dayNames) {
@@ -407,12 +409,12 @@ window.formatGoogleCalendar = function () {
                 pastTopN: -1,
                 upcomingTopN: -1,
                 recurringEvents: true,
-                itemsTagName: 'li',
+                itemsTagName: 'div class="dateItem"',
                 upcomingSelector: '#events-upcoming',
                 pastSelector: '#events-past',
                 upcomingHeading: '<h2>Upcoming events</h2>',
                 pastHeading: '<h2>Past events</h2>',
-                format: ['*dateDay*','<div class="details">', '*date*', ': ', '*summary*', ' &mdash; ', '*description*', ' in ', '*location*', '</div>'],
+                format: ['*summary*', '*dateDay*','<div class="details">', '*date*', ': ', ' &mdash; ', '*description*', ' in ', '*location*', '</div>'],
                 timeMin: undefined,
                 timeMax: undefined
             };
