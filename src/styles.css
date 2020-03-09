@@ -47,3 +47,28 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+.dateDay{
+		width: 45px;
+		height: 45px;
+		background-color: #007ad9;
+		border-radius: 90% 90% 0 90%;
+		display: table;
+		text-align: center;
+}
+
+.dateDay p{
+    display: table-cell;
+vertical-align: middle;
+font-size: inherit;
+color: #ffffff;
+font-weight: 800;
+font-family: 'Montserrat', sans-serif;
+}
+
+/* In de toekomst ga ik dit nog met een flexboxje fixen */
+.details {
+	position: relative;
+	top: -25px;
+	margin-left: 50px;
+}

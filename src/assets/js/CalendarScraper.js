@@ -170,6 +170,7 @@ window.formatGoogleCalendar = function () {
         }
 
         var dateFormatted = getFormattedDate(dateStart, dateEnd, dayNames, moreDaysEvent, isAllDayEvent),
+            dateDay = getDayDigit(dateStart),
             output = '<' + tagName + '>',
             summary = result.summary || '',
             description = result.description || '',
@@ -183,6 +184,8 @@ window.formatGoogleCalendar = function () {
                 output = output.concat('<span class="summary">' + summary + '</span>');
             } else if (format[i] === '*date*') {
                 output = output.concat('<span class="date">' + dateFormatted + '</span>');
+            } else if (format[i] === '*dateDay*') {
+                output = output.concat('<div class="dateDay"><p>' + dateDay + '</p></div>');
             } else if (format[i] === '*description*') {
                 output = output.concat('<span class="description">' + description + '</span>');
             } else if (format[i] === '*location*') {
@@ -279,6 +282,10 @@ window.formatGoogleCalendar = function () {
         //month day, year time-time
         return dayNameStart + ' ' + dateStart[0] + ' ' + getMonthName(dateStart[1]) + ', ' + dateStart[2] + formattedTime;
     };
+
+    var getDayDigit = function getDayDigit(dateStart){
+        return dateStart[0]+'/'+dateStart[1];
+    }
 
     var formatDateOneDay = function formatDateOneDay(dateStart, dayNames) {
         var dayName = '';
@@ -405,7 +412,7 @@ window.formatGoogleCalendar = function () {
                 pastSelector: '#events-past',
                 upcomingHeading: '<h2>Upcoming events</h2>',
                 pastHeading: '<h2>Past events</h2>',
-                format: ['*date*', ': ', '*summary*', ' &mdash; ', '*description*', ' in ', '*location*'],
+                format: ['*dateDay*','<div class="details">', '*date*', ': ', '*summary*', ' &mdash; ', '*description*', ' in ', '*location*', '</div>'],
                 timeMin: undefined,
                 timeMax: undefined
             };
