@@ -5,6 +5,10 @@ body {
     padding: 50px 30px 30px 30px;
 }
 
+.events {
+    margin-bottom: 20px;
+}
+
 .newscard:not(:first-child) {
     margin-top: 20px;
 }
@@ -12,7 +16,7 @@ body {
 .beThere {
     width: 60px;
     height: 60px;
-    background-color: #f1d600;
+    background-color: #70b010;
     border-radius: 90% 90% 0 90%;
     display: table;
     text-align: center;
@@ -36,8 +40,25 @@ font-family: 'Montserrat', sans-serif;
 
 }
 
+.indexbutton {
+    background-color: #70b010;
+    border-color: #70b010;
+}
+
 .fullBeThereHeader{
     display: table;
+}
+
+.refreshButton {
+    background-color: #70b010;
+    color: #ffffff;
+    border-width: 0;
+    border-radius: 90px;
+    height: 45px;
+    width: 45px;
+    cursor: pointer;
+    font-size: 20px;
+    float: right;
 }
 
  /* Smartphone layout */
@@ -77,6 +98,23 @@ font-family: 'Montserrat', sans-serif;
 
 .beThere-header{
     font-size: 20px;
+}
+
+.refreshButton:hover {
+    -webkit-transform: rotate(220deg); /* Safari and Chrome */
+    -moz-transform: rotate(220deg);   /* Firefox */
+    -ms-transform: rotate(220deg);   /* IE 9 */
+    -o-transform: rotate(220deg);   /* Opera */
+    transform: rotate(220deg);
+    transition-duration: 0.8s;
+    background-color: #70b010c2;
+    color: #333333;
+} 
+
+.indexbutton:hover {
+    background-color: #70b010c2 !important;
+    color: #333333 !important;
+    border-color: #70b010c2 !important;
 }
 
 }

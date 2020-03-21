@@ -1,9 +1,9 @@
 formatGoogleCalendar.init({
     calendarUrl: 'https://www.googleapis.com/calendar/v3/calendars/roger@kazourmt.be/events?key=AIzaSyCR3-ptjHE-_douJsn8o20oRwkxt-zHStY',
-    past: false,
+    past: true,
     upcoming: true,
     sameDayTimes: true,
-    pastTopN: 0,
+    pastTopN: 3,
     upcomingTopN: 20,
     recurringEvents: true,
     itemsTagName: 'div class="dateItem"',
