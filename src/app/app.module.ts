@@ -11,13 +11,15 @@ import { Button } from 'protractor';
 import { HeaderComponent } from './header/header.component';
 import { IndexComponent } from './index/index.component';
 import { FooterComponent } from './footer/footer.component';
+import { OpenPlaatsenComponent } from './open-plaatsen/open-plaatsen.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     IndexComponent,
-    FooterComponent
+    FooterComponent,
+    OpenPlaatsenComponent
   ],
   imports: [
     BrowserModule,
