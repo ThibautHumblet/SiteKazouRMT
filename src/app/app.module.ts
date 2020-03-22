@@ -12,6 +12,7 @@ import { HeaderComponent } from './header/header.component';
 import { IndexComponent } from './index/index.component';
 import { FooterComponent } from './footer/footer.component';
 import { OpenPlaatsenComponent } from './open-plaatsen/open-plaatsen.component';
+import { CalendarComponent } from './calendar/calendar.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { OpenPlaatsenComponent } from './open-plaatsen/open-plaatsen.component';
     HeaderComponent,
     IndexComponent,
     FooterComponent,
-    OpenPlaatsenComponent
+    OpenPlaatsenComponent,
+    CalendarComponent
   ],
   imports: [
     BrowserModule,
