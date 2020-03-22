@@ -1,5 +1,5 @@
-<body>
-<div class="p-grid">
+<div class="indexLayout">
+  <div class="p-grid">
     <div class="p-col">
       <div class="left-column">
         <div class="newscard">
@@ -10,19 +10,16 @@
               delectus
               dolor, tempora at magnam libero unde. Nisi excepturi cumque veritatis necessitatibus laborum, dolorum
               corrupti, quos error alias maiores consequatur, molestiae quasi molestias possimus quam.</p>
-            <p-footer>
-              <button pButton class="indexbutton" type="button" label="Ga naar ..."></button>
-            </p-footer>
           </p-card>
         </div>
         <div class="newscard">
           <p-card>
-            <h1>Nog meer nieuws</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero qui odio temporibus eaque earum
-              consequatur iusto nostrum maiores incidunt optio.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime voluptate fuga excepturi cum! Quis
-              repudiandae, ut veritatis ad quas optio magni sit eveniet placeat sed alias cumque itaque laboriosam vero
-              beatae accusamus? Debitis, voluptate!</p>
+            <h1>Digitale Oscars!</h1>
+            <p>We kennen allemaal wel dat gevoel: je bent op vakantie en het is tijd voor de coaching. Maar waar liggen nu in hemelsnaam die Oscars ook alweer? Of ben je benieuwd naar welke competenties een VV, zinspeler, instructeur, ... nu eigenlijk gecoached worden? Zoek niet verder! Bespaar jezelf en kazou die extra papieren en neem gewoon hier op onze site een kijkje naar de digitale oscars.</p>
+            <p>Wil je de oscars bekijken van alle verschillende vakantieprofielen? Neem dan snel een kijkje op de onderstaande link!</p>
+            <p-footer>
+              <button pButton class="indexbutton" type="button" label="Ga naar Oscars" [routerLink]="['/oscars']"></button>
+            </p-footer>
           </p-card>
         </div>
       </div>
@@ -30,30 +27,32 @@
     <div class="p-col">
       <div class="right-column">
         <p-card>
-          <button  class="refreshButton" onClick="window.location.reload();"><i class="pi pi-replay"></i></button>
+          <button class="refreshButton" onClick="window.location.reload();"><i class="pi pi-replay"></i></button>
           <div class="p-grid">
             <div class="fullBeThereHeader">
-            <div class="p-col-1">          
-              <div class="beThere">
-              <p>!</p>
+              <div class="p-col-1">
+                <div class="beThere">
+                  <p>!</p>
+                </div>
+              </div>
+              <div class="p-col-11 beThere-header">
+                <h1>BE THERE!</h1>
+              </div>
             </div>
-          </div>
-            <div class="p-col-11 beThere-header"><h1>BE THERE!</h1></div>
-          </div>
-          <div class="events">
-            <div>
-              <ul id="events-upcoming">
-              </ul>
+            <div class="events">
+              <div>
+                <ul id="events-upcoming">
+                </ul>
+              </div>
+              <div>
+                <ul id="events-past">
+                </ul>
+              </div>
             </div>
-            <div>
-              <ul id="events-past">
-              </ul>
-            </div>
-          </div>
             <button class="indexbutton" pButton type="button" label="Agenda synchroniseren"></button>
-        </div>
+          </div>
         </p-card>
       </div>
     </div>
   </div>
-</body>  
+</div>

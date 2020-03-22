@@ -4,6 +4,7 @@ import { IndexComponent } from './index/index.component';
 import { flush } from '@angular/core/testing';
 import { OpenPlaatsenComponent } from './open-plaatsen/open-plaatsen.component';
 import { CalendarComponent } from './calendar/calendar.component';
+import { OscarsComponent } from './oscars/oscars.component';
 
 
 const routes: Routes = [
@@ -23,6 +24,10 @@ const routes: Routes = [
   {
     path:'calendar',
     component: CalendarComponent
+  },
+  {
+    path:'oscars',
+    component: OscarsComponent
   }
 ];
 
