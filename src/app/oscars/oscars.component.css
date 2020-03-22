@@ -19,3 +19,11 @@ body .ui-accordion .ui-accordion-header:not(.ui-state-disabled).ui-state-active 
     background-color: #70b010 !important;
     border-color: #70b010 !important;
 }
+
+.title {
+    padding-bottom: 25px;
+}
+
+.disclaimer {
+    padding-top: 20px;
+}
