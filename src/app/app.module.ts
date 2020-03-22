@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {CardModule} from 'primeng/card'; 
 import {ButtonModule} from 'primeng/button';
+import {AccordionModule} from 'primeng/accordion';
+import {TabViewModule} from 'primeng/tabview';
 
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
@@ -31,6 +33,8 @@ import { OscarsComponent } from './oscars/oscars.component';
     BrowserAnimationsModule,
     CardModule,
     ButtonModule,
+    AccordionModule,
+    TabViewModule,
     RouterModule.forRoot([
     ], {useHash: true})
   ],

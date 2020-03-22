@@ -1,0 +1,21 @@
+.oscarLayout {
+    width: 100%;
+    padding: 50px 30px 30px 30px;
+}
+
+.ui-tabview-selected {
+    background-color: #70b010 !important;
+    border-color: #70b010 !important;
+
+}
+
+.ui-tabview-selected:hover {
+    background-color: #70b010 !important;
+    border-color: #70b010 !important;
+
+}
+
+body .ui-accordion .ui-accordion-header:not(.ui-state-disabled).ui-state-active a{
+    background-color: #70b010 !important;
+    border-color: #70b010 !important;
+}
