@@ -1,4 +1,14 @@
 <div class="calendarLayout">
-    <iframe src="https://calendar.google.com/calendar/embed?src=roger%40kazourmt.be&ctz=Europe%2FBrussels" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-    <button pButton onclick="location.href='https://accounts.google.com/ServiceLogin?service=cl&passive=1209600&osid=1&continue=https://calendar.google.com/calendar/render?cid%3Droger@kazourmt.be&followup=https://calendar.google.com/calendar&scc=1#identifier'">Kalender synchroniseren met Google</button>
+    <div class="title">
+        <h1>Kalender</h1>
+        <p>
+          Op deze pagina kan je de kalender van Kazou RMT bekijken. Ook kan je deze kander koppelen aan je eigen Google agenda.
+        </p>
+      </div>
+    <div class="p-grid p-justify-center">
+        <div class="p-col-12">
+            <iframe class="calendar" src="https://calendar.google.com/calendar/embed?src=roger%40kazourmt.be&ctz=Europe%2FBrussels"></iframe>
+        </div>
+    </div>
+    <button pButton class="calendarbutton" type="button" onclick="location.href='https://accounts.google.com/ServiceLogin?service=cl&passive=1209600&osid=1&continue=https://calendar.google.com/calendar/render?cid%3Droger@kazourmt.be&followup=https://calendar.google.com/calendar&scc=1#identifier'" label="Kalender synchroniseren met Google"></button>
 </div>

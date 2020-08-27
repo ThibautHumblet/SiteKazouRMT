@@ -1,4 +1,58 @@
 .calendarLayout {
-    width: 100%;
-    padding: 50px 30px 30px 30px;
+  width: 100%;
+  padding: 50px 30px 30px 30px;
+  height: 80vh;
+}
+
+.calendarbutton {
+  background-color: #70b010;
+  border-color: #70b010;
+}
+
+.calendar {
+    border: 0;
+    height: 50vh;
+  }
+
+  .title {
+    padding-bottom: 25px;
+}
+
+@media(min-width: 425px) {
+    .calendar {
+        border: 0;
+        min-width: 380px;
+        width: fit-content;
+        height: 50vh;
+      }
+  }
+
+  @media(min-width: 600px) {
+    .calendar {
+      width: 570px;
+    }
+
+    .calendarbutton:hover {
+        background-color: #70b010c2 !important;
+        color: #333333 !important;
+        border-color: #70b010c2 !important;
+    }
+  }
+
+  @media(min-width: 750px) {
+    .calendar {
+      width: 710px;
+    }
+  }
+
+  @media(min-width: 820px) {
+    .calendar {
+      width: 790px;
+    }
+  }
+
+@media(min-width: 900px) {
+  .calendar {
+    width: 800px;
+  }
 }

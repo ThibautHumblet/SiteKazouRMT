@@ -1,6 +1,7 @@
 .oscarLayout {
     width: 100%;
     padding: 50px 30px 30px 30px;
+    min-height: 80vh;
 }
 
 .ui-tabview-selected {
