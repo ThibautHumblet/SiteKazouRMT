@@ -8,7 +8,7 @@
 }
 
 .navbar img {
-    height: 130px;
+    height: 90px;
     padding-left: 10px;
     padding-top: 5px;
     z-index: 200;
@@ -94,7 +94,7 @@
         display: block;
         width: 100%;
         background-color: #333;
-        height: 0px;
+        height: auto;
         transition: all 0.3s ease-in;
         overflow-y: hidden;
         top: 10vh;
@@ -111,7 +111,7 @@
         height: 0px;
     }
     .navbar>#navbar-check:checked+.navbar-links {
-        height: calc(100vh - 110px);
+        height: calc(100vh - 10vh);
         overflow-y: auto;
         padding-top: 50px;
     }
