@@ -5,3 +5,28 @@
     margin: 0px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
+
+.footer i{
+    padding:.5rem;
+    font-size: 200%;
+  }
+
+.footer a {
+    color: white;
+    text-decoration: none;
+  }
+
+@media(min-width: 751px){
+      
+    .footer i{
+        padding:20px;
+        font-size: 200%;
+      }
+      
+    .footer i:hover{
+        -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        transform: scale(1.3);
+      }
+}
+ 
