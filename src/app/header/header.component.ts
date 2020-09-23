@@ -12,4 +12,8 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
+  close() {
+    (document.getElementById('navbar-check') as HTMLFormElement).checked = false;
+  }
+
 }

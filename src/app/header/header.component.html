@@ -1,7 +1,7 @@
 <div class="navbar">
     <div class="navbar-header">
       <div class="navbar-title">
-        <a routerLink="index"><img src="assets/images/RegioMechelenTurnhout.png"></a>
+        <a routerLink="index" (click)="close()"><img src="assets/images/RegioMechelenTurnhout.png"></a>
       </div>
     </div>
     <div class="navbar-btn">
@@ -14,9 +14,9 @@
     <input type="checkbox" id="navbar-check">
     <div class="navbar-links">
       <a href="https://onkosten.kazourmt.be/">ONKOSTEN</a>
-      <a routerLink="open-plaatsen" style="display: none;">OPEN PLAATSEN</a>
-      <a>VV GPS</a>
-      <a routerLink="calendar">AGENDA</a>
+      <a routerLink="open-plaatsen" style="display: none;" (click)="close()">OPEN PLAATSEN</a>
+      <a href="https://kazourmt.be/vvgps">VV GPS</a>
+      <a routerLink="calendar" (click)="close()">AGENDA</a>
       <a href="https://drive.google.com/drive/folders/1TFLZQ4t7hcJoHfjXHCoxrPGtbzLiNbIw">GOOGLE DRIVE</a>
       <a href="https://rmt.kazou.be">RMT.KAZOU.BE</a>
     </div>
