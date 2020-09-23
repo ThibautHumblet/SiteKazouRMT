@@ -11,6 +11,7 @@ export class IndexComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
   }
 
   naarOscars = function () {

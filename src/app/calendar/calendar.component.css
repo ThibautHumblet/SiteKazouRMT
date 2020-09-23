@@ -2,6 +2,8 @@
   width: 100%;
   padding: 50px 30px 30px 30px;
   height: 80vh;
+  background-size: cover;
+  background-image: url(https://kazoustorageprod.blob.core.windows.net/mwportal/1026/bannerthemapagina_zomer.jpg);
 }
 
 .calendarbutton {
@@ -9,28 +11,44 @@
   border-color: #70b010;
 }
 
-.calendar {
-    border: 0;
-    height: 50vh;
-  }
-
   .title {
     padding-bottom: 25px;
 }
 
+.responsivecal {
+  position: relative; padding-bottom: 40vh; height: 0; overflow: hidden;
+}
+
+.responsivecal iframe {
+ 
+  position: absolute; top:0; left: 0; width: 100%; height:90%;
+   
+  }
+
 @media(min-width: 425px) {
-    .calendar {
-        border: 0;
-        min-width: 380px;
-        width: fit-content;
-        height: 50vh;
+
+
+      .responsivecal {
+        position: relative; height: 0; overflow: hidden;
       }
+      
+      .responsivecal iframe {
+       
+        position: absolute; top:0; left: 0; min-width: 380px; height: 100%;
+         
+        }
   }
 
   @media(min-width: 600px) {
-    .calendar {
-      width: 570px;
-    }
+      .responsivecal {
+        position: relative; height: 0; overflow: hidden;
+      }
+      
+      .responsivecal iframe {
+       
+        position: absolute; top:0; left: 0; min-width: 570px; height: 100%;
+         
+        }
 
     .calendarbutton:hover {
         background-color: #70b010c2 !important;
