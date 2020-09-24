@@ -18,10 +18,6 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: '**',
-    redirectTo: '/index',
-  },
-  {
     path:'open-plaatsen',
     component: OpenPlaatsenComponent
   },
@@ -32,6 +28,10 @@ const routes: Routes = [
   {
     path:'oscars',
     component: OscarsComponent
+  },
+  {
+    path: '**',
+    redirectTo: '/index',
   }
 ];
 
